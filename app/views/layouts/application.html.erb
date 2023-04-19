@@ -12,7 +12,17 @@
 
   <body>
        <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+       <p class="alert"><%= alert %></p> <br>
+       <div>
+          <% if user_signed_in?%>
+            <p><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %></p>
+            <% else %>
+            <p><%= link_to 'login', new_user_session_path, class:'' %></p>
+          <% end %>
+       </div>
+       <div>
+       <%= link_to 'Home', root_path , class:'' %>
+       </div>
     <%= yield %>
   </body>
 </html>
