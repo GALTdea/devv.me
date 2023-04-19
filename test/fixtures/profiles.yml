@@ -4,8 +4,10 @@ one:
   name: MyString
   resume_link: MyString
   about: MyText
+  user: one
 
 two:
   name: MyString
   resume_link: MyString
   about: MyText
+  user: two
